@@ -12,8 +12,16 @@ You can analyse both live and dumped streams.
 
 ## Requirements
 
-To run this program you need only **python** (at least 2.7 version) and the **scapy** module.  
-To install it on a debian/ubuntu system type `apt-get install python-scapy`.
+**rtmpSnoop** works both on Windows and Unix.  
+To run it you need only python (at least 2.7 version) and the scapy module. 
+
+**Unix Installation**  
+To install it on a debian/ubuntu system type:  
+`apt-get install python-scapy`
+
+**Windows Installation**  
+Follow this guide to install scapy module on windows:
+http://www.secdev.org/projects/scapy/doc/installation.html#windows
 
 ## Usage
 
