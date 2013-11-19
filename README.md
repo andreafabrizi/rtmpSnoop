@@ -21,17 +21,19 @@ To install it on a debian/ubuntu system type:
 
 **Mac Installation**  
 
-grabe a copy of pcapy from:
-http://corelabs.coresecurity.com/
-and dnet
-http://libdnet.sourceforge.net/
-And for mac users unzip and cd in to dnet file then
+* Download pcapy from http://corelabs.coresecurity.com/
+* Download dnet from http://libdnet.sourceforge.net/
 
-CFLAGS='-arch i386 -arch x86_64' ./configure --prefix=/usr
-archargs='-arch i386 -arch x86_64' make
-sudo make install
-cd python
-sudo python setup.py install
+Unzip and cd in to dnet file then
+
+```
+ CFLAGS='-arch i386 -arch x86_64' ./configure --prefix=/usr
+ archargs='-arch i386 -arch x86_64' make
+ sudo make install
+ cd python
+ sudo python setup.py install
+```
+
 **Windows Installation**  
 Follow this guide to install scapy module on windows:
 http://www.secdev.org/projects/scapy/doc/installation.html#windows
