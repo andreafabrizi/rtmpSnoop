@@ -15,10 +15,23 @@ You can analyse both live and dumped streams.
 **rtmpSnoop** works both on Windows and Unix.  
 To run it you need only python (at least 2.7 version) and the scapy module. 
 
-**Unix Installation**  
+**Linux Installation**  
 To install it on a debian/ubuntu system type:  
 `apt-get install python-scapy`
 
+**Mac Installation**  
+
+grabe a copy of pcapy from:
+http://corelabs.coresecurity.com/
+and dnet
+http://libdnet.sourceforge.net/
+And for mac users unzip and cd in to dnet file then
+
+CFLAGS='-arch i386 -arch x86_64' ./configure --prefix=/usr
+archargs='-arch i386 -arch x86_64' make
+sudo make install
+cd python
+sudo python setup.py install
 **Windows Installation**  
 Follow this guide to install scapy module on windows:
 http://www.secdev.org/projects/scapy/doc/installation.html#windows
