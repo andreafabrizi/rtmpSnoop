@@ -18,6 +18,9 @@ To run it you need only python (at least 2.7 version) and the scapy module.
 **Linux Installation**  
 To install it on a debian/ubuntu system type:  
 `apt-get install python-scapy`
+On RedHat or Centos:
+`yum install scapy.noarch`
+`yum install python-argparse.noarch`
 
 **Mac Installation**  
 
