@@ -20,7 +20,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 # 02110-1301 USA
 #
-import os
+import os, sys
 
 class Logger():
     def __init__ (self, debug=False, quiet=False):
@@ -29,14 +29,14 @@ class Logger():
 
     def debug(self, message):
         if self.DEBUG and not self.QUIET:
-            print "# %s" % message
+            print >> sys.stder, "# %s" % message
 
     def error(self, message):
-        print "*** %s" % message
+        print >> sys.stderr, "*** %s" % message
 
     def info(self, message):
         if not self.QUIET:
-            print message
+            print >> sys.stderr, message
 
 
 logger = Logger()
