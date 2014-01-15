@@ -144,25 +144,25 @@ class amfCommands():
 
         line = "rtmpdump -r '%s' " % self.RTMP["url"]
 
-        if self.RTMP.has_key("app"):
+        if self.RTMP["app"]:
             line += "-a '%s' " % self.RTMP["app"]
 
-        if self.RTMP.has_key("tcUrl"):
+        if self.RTMP["tcUrl"]:
             line += "-t '%s' " % self.RTMP["tcUrl"]
 
-        if self.RTMP.has_key("playPath"):
+        if self.RTMP["playPath"]:
             line += "-y '%s' " % self.RTMP["playPath"]
 
-        if self.RTMP.has_key("swfUrl"):
+        if self.RTMP["swfUrl"]:
             line += "-W '%s' " % self.RTMP["swfUrl"]
 
-        if self.RTMP.has_key("pageUrl"):
+        if self.RTMP["pageUrl"]:
             line += "-p '%s' " % self.RTMP["pageUrl"]
 
-        if self.RTMP.has_key("flashVer"):
+        if self.RTMP["flashVer"]:
             line += "-f '%s' " % self.RTMP["flashVer"]
 
-        if self.RTMP.has_key("extra"):
+	if self.RTMP["extra"]:
             line += "-C %s " % self.RTMP["extra"]
 
         line += "--live -o stream.flv"
