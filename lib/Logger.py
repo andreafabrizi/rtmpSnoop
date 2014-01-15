@@ -24,8 +24,8 @@ import os
 
 class Logger():
     def __init__ (self, debug=False, quiet=False):
-        self.DEBUG= debug
-        self.QUIET = debug
+        self.DEBUG = debug
+        self.QUIET = quiet
 
     def debug(self, message):
         if self.DEBUG and not self.QUIET:
