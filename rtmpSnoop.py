@@ -30,6 +30,8 @@ from lib.amfCommand import amfCommand, amfCommands
 from lib.Logger import logger
 import argparse
 
+VERSION="0.2"
+
 """
 Packet Handler Callback from scapy
 I don't care about the packet fragmentation, because is supposed that I'm sniffing on
@@ -134,7 +136,7 @@ if __name__ == "__main__":
     out_mode = args.out_mode
     quit_first = args.quit_first
 
-    logger.info("rtmpSnoop v0.1 - The RTMP Sniffer!")
+    logger.info("rtmpSnoop v%s - The RTMP Sniffer!" % VERSION)
     logger.info("Andrea Fabrizi - andrea.fabrizi@gmail.com\n")
 
     streams = dict()
