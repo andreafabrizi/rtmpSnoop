@@ -161,11 +161,19 @@ class amfCommands():
 
         if self.RTMP["flashVer"]:
             line += "-f '%s' " % self.RTMP["flashVer"]
-
-	if self.RTMP["extra"]:
+        
+        if self.RTMP["extra"]:
             line += "-C %s " % self.RTMP["extra"]
 
-        line += "--live -o stream.flv"
-
+        line += "--live -o "
+        if self.RTMP["playPath"]:
+            filename = os.path.basename(self.RTMP["playPath"])
+            if filename:
+                line += filename
+            else:
+                line += "stream.flv"
+        else:
+            line += "stream.flv"
+        
         print line
         self.printBar()
