@@ -29,7 +29,7 @@ class Logger():
 
     def debug(self, message):
         if self.DEBUG and not self.QUIET:
-            print >> sys.stder, "# %s" % message
+            print >> sys.stderr, "# %s" % message
 
     def error(self, message):
         print >> sys.stderr, "*** %s" % message
