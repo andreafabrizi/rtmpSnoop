@@ -30,7 +30,7 @@ from lib.amfCommand import amfCommand, amfCommands
 from lib.Logger import logger
 import argparse
 
-VERSION="0.2"
+VERSION="0.2.1"
 
 """
 Packet Handler Callback from scapy
