@@ -146,6 +146,8 @@ class amfCommands():
 
         if self.RTMP["app"]:
             line += "-a '%s' " % self.RTMP["app"]
+        else:
+            line += "-a '' "
 
         if self.RTMP["tcUrl"]:
             line += "-t '%s' " % self.RTMP["tcUrl"]
