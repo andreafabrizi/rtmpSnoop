@@ -117,3 +117,9 @@ rtmpdump -r 'rtmp://192.168.1.1/live/channel?id=12345' -a 'live' -t 'rtmp://192.
 -y 'channel?id=12345' -W 'http://www.test.eu/scripts/player.swf' -p 'http://www.test.eu/embedded/channel/1/500/380' 
 -f 'LNX 11,7,700,203' -C S:OK  --live -o stream.flv
 ```
+
+## Donations
+
+ If you want to support this project, please consider donating:
+ * PayPal: andrea.fabrizi@gmail.com
+ * BTC: 1JHCGAMpKqUwBjcT3Kno9Wd5z16K6WKPqG
