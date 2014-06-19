@@ -150,7 +150,7 @@ if __name__ == "__main__":
     elif args.device:
         logger.info("Starting sniffing on %s..." % args.device)
         try:
-            sniff(iface=args.device, prn = PacketHandler)
+            sniff(iface=args.device, prn = PacketHandler, store = 0)
         except socket.error as e:
             logger.error("Error opening %s for sniffing: %s" % (args.device, e))
             logger.info("Are you root and the device is correct?")
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     else:
         logger.info("Starting sniffing on all devices...")
         try:
-            sniff(prn = PacketHandler)
+            sniff(prn = PacketHandler, store = 0)
         except socket.error as e:
             logger.error("Error opening device for sniffing: %s" % e)
             logger.info("Are you root?")
