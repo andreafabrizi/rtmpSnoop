@@ -61,7 +61,7 @@ class Stream():
     def getByte(self):
         return ord(self.getBytes(1))
 
-    #Reads n bytes from the stream without increments the offset
+    #Reads n bytes from the stream without incrementing the offset
     def readBytes(self, n):
         if self.offset >= self.size:
             return None
