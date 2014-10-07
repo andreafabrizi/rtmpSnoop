@@ -29,21 +29,30 @@ class Stream():
         self.offset = 0
         self.size = len(stream)
         self.dontScanAgain = False
+        self.unmergedData = []
 
-    #Appends new data to the stream
+    #Appends new data to the buffer
     def appendData(self, data):
-        self.stream +=data
+        self.unmergedData.append(data)
         self.size +=len(data)
+    
+    #Merges the buffered data into the stream
+    def _mergeData(self):
+        if self.unmergedData:
+            self.stream += ''.join(self.unmergedData)
+            self.unmergedData = []
     
     #Prints the stream 
     def dump(self):
+        self._mergeData()
         hexdump(self.stream[self.offset:])
 
-    #Gets n bytes from the buffer and increments the offset
+    #Gets n bytes from the stream and increments the offset
     def getBytes(self, n):
         if self.offset + n> self.size:
             raise StreamNoMoreBytes
 
+        self._mergeData()
         bytes = self.stream[self.offset:self.offset+n]
         self.offset = self.offset + n
         return bytes
@@ -52,11 +61,12 @@ class Stream():
     def getByte(self):
         return ord(self.getBytes(1))
 
-    #Reads n bytes from the buffer without increments the offset
+    #Reads n bytes from the stream without increments the offset
     def readBytes(self, n):
         if self.offset >= self.size:
             return None
 
+        self._mergeData()
         bytes = self.stream[self.offset:self.offset+n]
         return bytes
 
