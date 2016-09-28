@@ -3,6 +3,8 @@
 **rtmpSnoop** lets you to sniff RTMP streams from live TV, online channels and straming services and dump the RTMP properties in many formats.
 You can analyse both live and dumped streams.
 
+You can take a look at the [GitHub project page](https://github.com/andreafabrizi/rtmpSnoop/)
+
 ## Features
 
 * Live sniffing from one ore more interfaces
@@ -41,6 +43,11 @@ Unzip and cd in to dnet file then
 **Windows Installation**  
 Follow this guide to install scapy module on windows:
 http://www.secdev.org/projects/scapy/doc/installation.html#windows
+
+## Get the code
+```
+git clone https://github.com/andreafabrizi/rtmpSnoop.git
+```
 
 ## Usage
 
